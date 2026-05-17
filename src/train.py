@@ -8,15 +8,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
 
 
-DATA_PATH = "data/spam_dataset.csv"
+DATA_PATH = "data/spam.csv"
 MODEL_PATH = "spam_model.pkl"
 
 
 def train_model():
-    df = pd.read_csv(DATA_PATH)
+    df = pd.read_csv(DATA_PATH, encoding="latin-1")
 
-    X = df["message"]
-    y = df["label"]
+    X = df["v2"]
+    y = df["v1"]
 
     X_train, X_test, y_train, y_test = train_test_split(
         X,
