@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+spam_model.pkl
+.env
+.DS_Store
